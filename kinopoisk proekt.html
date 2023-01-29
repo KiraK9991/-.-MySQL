@@ -1,0 +1,1142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>File Compare</title>
+  <style type="text/css">
+  #page {
+    font-family: sans-serif;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  td {
+    white-space: nowrap;
+    font-family: monospace;
+    font-size: x-small;
+    vertical-align: top;
+  }
+  td.fileName {
+    background: #E6E6E6;
+    font-family: sans-serif;
+    font-size: small;
+  }
+  td.lineNumber {
+    text-align: right;
+    background: #FFC800;
+  }
+  td.added {
+    background: #BEF0BE;
+  }
+  td.removed {
+    background: #C8C8FF;
+  }
+  td.changed {
+    background: #FFC8C8;
+  }
+  td.equal {
+    background: #FFFFFF;
+  }
+  td.empty {
+    background: #F2F2F2;
+  }
+  </style>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+  <table>
+    <tr>
+      <td colspan="2" class="filename">kinopoisk_hd.sql</td>
+      <td colspan="2" class="filename">kinopoisk_hd.sql</td>
+    </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">1</td><td class="added">CREATE&nbsp;DATABASE&nbsp;kinopoisk_hd&nbsp;CHARACTER&nbsp;SET&nbsp;utf8mb4&nbsp;COLLATE&nbsp;utf8mb4_unicode_ci;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">2</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">3</td><td class="added">USE&nbsp;kinopoisk_hd;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">4</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">5</td><td class="added">--&nbsp;&#1089;&#1090;&#1088;&#1072;&#1085;&#1099;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">6</td><td class="added">CREATE&nbsp;TABLE&nbsp;countries&nbsp;(</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">7</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;INT&nbsp;AUTO_INCREMENT&nbsp;PRIMARY&nbsp;KEY,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">8</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;VARCHAR(250)&nbsp;NOT&nbsp;NULL&nbsp;UNIQUE</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">9</td><td class="added">);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">10</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">11</td><td class="added">--&nbsp;&#1103;&#1079;&#1099;&#1082;&#1080;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">12</td><td class="added">CREATE&nbsp;TABLE&nbsp;languages&nbsp;(</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">13</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;INT&nbsp;AUTO_INCREMENT&nbsp;PRIMARY&nbsp;KEY,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">14</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;VARCHAR(250)&nbsp;NOT&nbsp;NULL&nbsp;UNIQUE</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">15</td><td class="added">);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">16</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">17</td><td class="added">--&nbsp;&#1074;&#1086;&#1079;&#1088;&#1072;&#1089;&#1090;&#1085;&#1099;&#1077;&nbsp;&#1088;&#1077;&#1081;&#1090;&#1080;&#1085;&#1075;&#1080;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">18</td><td class="added">CREATE&nbsp;TABLE&nbsp;age_ratings&nbsp;(</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">19</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;INT&nbsp;AUTO_INCREMENT&nbsp;PRIMARY&nbsp;KEY,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">20</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;VARCHAR(3)&nbsp;NOT&nbsp;NULL&nbsp;UNIQUE</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">21</td><td class="added">);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">22</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">23</td><td class="added">--&nbsp;&#1082;&#1072;&#1085;&#1072;&#1083;&#1099;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">24</td><td class="added">CREATE&nbsp;TABLE&nbsp;channels&nbsp;(</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">25</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;INT&nbsp;AUTO_INCREMENT&nbsp;PRIMARY&nbsp;KEY,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">26</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;VARCHAR(250)&nbsp;NOT&nbsp;NULL&nbsp;UNIQUE</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">27</td><td class="added">);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">28</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">29</td><td class="added">--&nbsp;&#1092;&#1080;&#1083;&#1100;&#1084;&#1099;&nbsp;&#1080;&nbsp;&#1089;&#1077;&#1088;&#1080;&#1072;&#1083;&#1099;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">30</td><td class="added">CREATE&nbsp;TABLE&nbsp;films&nbsp;(</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">31</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;INT&nbsp;AUTO_INCREMENT&nbsp;PRIMARY&nbsp;KEY,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">32</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;VARCHAR(500)&nbsp;NOT&nbsp;NULL,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">33</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;original_title&nbsp;VARCHAR(500)&nbsp;NOT&nbsp;NULL,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">34</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;short_description&nbsp;TEXT&nbsp;NOT&nbsp;NULL,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">35</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;description&nbsp;TEXT&nbsp;NOT&nbsp;NULL,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">36</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;release_date&nbsp;DATE&nbsp;NOT&nbsp;NULL,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">37</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;rating&nbsp;DOUBLE,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">38</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;rating_count&nbsp;INT&nbsp;NOT&nbsp;NULL&nbsp;DEFAULT&nbsp;0,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">39</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;is_4k&nbsp;BOOL&nbsp;NOT&nbsp;NULL,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">40</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;duration&nbsp;INT&nbsp;NOT&nbsp;NULL,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">41</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;country_id&nbsp;INT,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">42</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;age_rating_id&nbsp;INT,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">43</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;channel_id&nbsp;INT,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">44</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;(title),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">45</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;FOREIGN&nbsp;KEY&nbsp;(country_id)&nbsp;REFERENCES&nbsp;countries(id),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">46</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;FOREIGN&nbsp;KEY&nbsp;(age_rating_id)&nbsp;REFERENCES&nbsp;age_ratings(id),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">47</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;FOREIGN&nbsp;KEY&nbsp;(channel_id)&nbsp;REFERENCES&nbsp;channels(id)</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">48</td><td class="added">);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">49</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">50</td><td class="added">--&nbsp;&#1078;&#1072;&#1085;&#1088;&#1099;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">51</td><td class="added">CREATE&nbsp;TABLE&nbsp;genres&nbsp;(</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">52</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;INT&nbsp;AUTO_INCREMENT&nbsp;PRIMARY&nbsp;KEY,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">53</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;VARCHAR(250)&nbsp;NOT&nbsp;NULL&nbsp;UNIQUE</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">54</td><td class="added">);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">55</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">56</td><td class="added">--&nbsp;&#1083;&#1102;&#1076;&#1080;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">57</td><td class="added">CREATE&nbsp;TABLE&nbsp;persons&nbsp;(</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">58</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;INT&nbsp;AUTO_INCREMENT&nbsp;PRIMARY&nbsp;KEY,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">59</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;VARCHAR(250)&nbsp;NOT&nbsp;NULL,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">60</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;original_name&nbsp;VARCHAR(250),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">61</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;birthday&nbsp;DATE,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">62</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;height&nbsp;DOUBLE</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">63</td><td class="added">);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">64</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">65</td><td class="added">--&nbsp;&#1076;&#1086;&#1083;&#1078;&#1085;&#1086;&#1089;&#1090;&#1080;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">66</td><td class="added">CREATE&nbsp;TABLE&nbsp;posts&nbsp;(</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">67</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;INT&nbsp;AUTO_INCREMENT&nbsp;PRIMARY&nbsp;KEY,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">68</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;VARCHAR(250)&nbsp;NOT&nbsp;NULL</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">69</td><td class="added">);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">70</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">71</td><td class="added">--&nbsp;&#1087;&#1077;&#1088;&#1077;&#1095;&#1077;&#1085;&#1100;&nbsp;&#1078;&#1072;&#1085;&#1088;&#1086;&#1074;&nbsp;&#1076;&#1083;&#1103;&nbsp;&#1082;&#1072;&#1078;&#1076;&#1086;&#1075;&#1086;&nbsp;&#1092;&#1080;&#1083;&#1100;&#1084;&#1072;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">72</td><td class="added">CREATE&nbsp;TABLE&nbsp;film_genres&nbsp;(</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">73</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;INT&nbsp;AUTO_INCREMENT&nbsp;PRIMARY&nbsp;KEY,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">74</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;film_id&nbsp;INT,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">75</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;genre_id&nbsp;INT,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">76</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;UNIQUE(film_id,&nbsp;genre_id),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">77</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;FOREIGN&nbsp;KEY&nbsp;(film_id)&nbsp;REFERENCES&nbsp;films(id),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">78</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;FOREIGN&nbsp;KEY&nbsp;(genre_id)&nbsp;REFERENCES&nbsp;genres(id)</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">79</td><td class="added">);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">80</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">81</td><td class="added">--&nbsp;&#1072;&#1091;&#1076;&#1080;&#1086;&#1076;&#1086;&#1088;&#1086;&#1078;&#1082;&#1080;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">82</td><td class="added">CREATE&nbsp;TABLE&nbsp;film_languages&nbsp;(</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">83</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;INT&nbsp;AUTO_INCREMENT&nbsp;PRIMARY&nbsp;KEY,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">84</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;film_id&nbsp;INT,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">85</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;language_id&nbsp;INT,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">86</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;UNIQUE(film_id,&nbsp;language_id),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">87</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;FOREIGN&nbsp;KEY&nbsp;(film_id)&nbsp;REFERENCES&nbsp;films(id),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">88</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;FOREIGN&nbsp;KEY&nbsp;(language_id)&nbsp;REFERENCES&nbsp;languages(id)</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">89</td><td class="added">);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">90</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">91</td><td class="added">--&nbsp;&#1089;&#1098;&#1105;&#1084;&#1086;&#1095;&#1085;&#1072;&#1103;&nbsp;&#1082;&#1086;&#1084;&#1072;&#1085;&#1076;&#1072;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">92</td><td class="added">CREATE&nbsp;TABLE&nbsp;film_crew&nbsp;(</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">93</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;INT&nbsp;AUTO_INCREMENT&nbsp;PRIMARY&nbsp;KEY,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">94</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;film_id&nbsp;INT,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">95</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;person_id&nbsp;INT,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">96</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;post_id&nbsp;INT,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">97</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;UNIQUE(film_id,&nbsp;person_id,&nbsp;post_id),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">98</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;FOREIGN&nbsp;KEY&nbsp;(film_id)&nbsp;REFERENCES&nbsp;films(id),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">99</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;FOREIGN&nbsp;KEY&nbsp;(person_id)&nbsp;REFERENCES&nbsp;persons(id),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">100</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;FOREIGN&nbsp;KEY&nbsp;(post_id)&nbsp;REFERENCES&nbsp;posts(id)</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">101</td><td class="added">);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">102</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">103</td><td class="added">--&nbsp;&#1089;&#1077;&#1088;&#1080;&#1080;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">104</td><td class="added">CREATE&nbsp;TABLE&nbsp;episodes&nbsp;(</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">105</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;INT&nbsp;AUTO_INCREMENT&nbsp;PRIMARY&nbsp;KEY,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">106</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;season_number&nbsp;INT&nbsp;NOT&nbsp;NULL&nbsp;DEFAULT&nbsp;1,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">107</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;episode_number&nbsp;INT&nbsp;NOT&nbsp;NULL&nbsp;DEFAULT&nbsp;1,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">108</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;VARCHAR(500),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">109</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;description&nbsp;TEXT,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">110</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;duration&nbsp;INT&nbsp;NOT&nbsp;NULL,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">111</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;film_id&nbsp;INT,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">112</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;FOREIGN&nbsp;KEY&nbsp;(film_id)&nbsp;REFERENCES&nbsp;films(id)</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">113</td><td class="added">);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">114</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">115</td><td class="added">--&nbsp;&#1080;&#1089;&#1090;&#1086;&#1088;&#1080;&#1103;&nbsp;&#1091;&#1076;&#1072;&#1083;&#1105;&#1085;&#1085;&#1099;&#1093;&nbsp;&#1092;&#1080;&#1083;&#1100;&#1084;&#1086;&#1074;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">116</td><td class="added">CREATE&nbsp;TABLE&nbsp;deleted_films&nbsp;(</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">117</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;INT&nbsp;AUTO_INCREMENT&nbsp;PRIMARY&nbsp;KEY,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">118</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;film_id&nbsp;INT&nbsp;NOT&nbsp;NULL,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">119</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;VARCHAR(500)&nbsp;NOT&nbsp;NULL,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">120</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;delete_date&nbsp;TIMESTAMP&nbsp;NOT&nbsp;NULL</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">121</td><td class="added">);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">122</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">123</td><td class="added">--&nbsp;&#1076;&#1072;&#1085;&#1085;&#1099;&#1077;&nbsp;&#1089;&#1087;&#1088;&#1072;&#1074;&#1086;&#1095;&#1085;&#1080;&#1082;&#1086;&#1074;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">124</td><td class="added">INSERT&nbsp;INTO&nbsp;countries(name)&nbsp;VALUES('&#1057;&#1064;&#1040;'),&nbsp;('&#1044;&#1072;&#1085;&#1080;&#1103;');</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">125</td><td class="added">INSERT&nbsp;INTO&nbsp;languages(title)&nbsp;VALUES&nbsp;('&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;'),&nbsp;('&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;&nbsp;5.1'),&nbsp;('&#1040;&#1085;&#1075;&#1083;&#1080;&#1081;&#1089;&#1082;&#1080;&#1081;'),&nbsp;('&#1040;&#1085;&#1075;&#1083;&#1080;&#1081;&#1089;&#1082;&#1080;&#1081;&nbsp;5.1');</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">126</td><td class="added">INSERT&nbsp;INTO&nbsp;age_ratings(title)&nbsp;VALUES&nbsp;('0+'),&nbsp;('12+'),&nbsp;('16+'),&nbsp;('18+');</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">127</td><td class="added">INSERT&nbsp;INTO&nbsp;channels(title)&nbsp;VALUES&nbsp;('&#1053;&#1077;&#1090;'),&nbsp;('Viju'),&nbsp;('HBO'),&nbsp;('more.tv');</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">128</td><td class="added">INSERT&nbsp;INTO&nbsp;genres(title)&nbsp;VALUES&nbsp;('&#1073;&#1086;&#1077;&#1074;&#1080;&#1082;'),&nbsp;('&#1076;&#1088;&#1072;&#1084;&#1072;'),&nbsp;('&#1092;&#1072;&#1085;&#1090;&#1072;&#1089;&#1090;&#1080;&#1082;&#1072;'),&nbsp;('&#1090;&#1088;&#1080;&#1083;&#1083;&#1077;&#1088;'),&nbsp;('&#1082;&#1088;&#1080;&#1084;&#1080;&#1085;&#1072;&#1083;');</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">129</td><td class="added">INSERT&nbsp;INTO&nbsp;posts(title)&nbsp;VALUES&nbsp;('&#1042;&nbsp;&#1075;&#1083;&#1072;&#1074;&#1085;&#1099;&#1093;&nbsp;&#1088;&#1086;&#1083;&#1103;&#1093;'),&nbsp;('&#1056;&#1077;&#1078;&#1080;&#1089;&#1089;&#1105;&#1088;');</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">130</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">131</td><td class="added">--&nbsp;&#1076;&#1072;&#1085;&#1085;&#1099;&#1077;&nbsp;&#1072;&#1082;&#1090;&#1105;&#1088;&#1086;&#1074;&nbsp;&#1080;&nbsp;&#1088;&#1077;&#1078;&#1080;&#1089;&#1089;&#1105;&#1088;&#1086;&#1074;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">132</td><td class="added">INSERT&nbsp;INTO&nbsp;persons(name,&nbsp;original_name,&nbsp;birthday,&nbsp;height)&nbsp;VALUES</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">133</td><td class="added">('&#1053;&#1080;&#1082;&#1086;&#1083;&#1072;&#1081;&nbsp;&#1050;&#1086;&#1089;&#1090;&#1077;&#1088;-&#1042;&#1072;&#1083;&#1100;&#1076;&#1072;&#1091;',&nbsp;'Nikolaj&nbsp;Coster-Waldau',&nbsp;'1970-07-27',&nbsp;1.88),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">134</td><td class="added">('&#1054;&#1084;&#1072;&#1088;&#1080;&nbsp;&#1061;&#1072;&#1088;&#1076;&#1074;&#1080;&#1082;',&nbsp;'Omari&nbsp;Hardwick',&nbsp;'1974-01-09',&nbsp;1.78),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">135</td><td class="added">('&#1051;&#1077;&#1081;&#1082;&nbsp;&#1041;&#1077;&#1083;&#1083;',&nbsp;'Lake&nbsp;Bell',&nbsp;'1979-03-24',&nbsp;1.73),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">136</td><td class="added">('&#1044;&#1078;&#1086;&#1085;&nbsp;&#1041;&#1077;&#1088;&#1085;&#1090;&#1072;&#1083;',&nbsp;'Jon&nbsp;Bernthal',&nbsp;'1976-09-20',&nbsp;1.8),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">137</td><td class="added">('&#1056;&#1080;&#1082;&nbsp;&#1056;&#1086;&#1084;&#1072;&#1085;&nbsp;&#1042;&#1086;',&nbsp;'Ric&nbsp;Roman&nbsp;Waugh',&nbsp;'1968-02-20',&nbsp;NULL),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">138</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">139</td><td class="added">('&#1058;&#1086;&#1084;&nbsp;&#1050;&#1088;&#1091;&#1079;',&nbsp;'Tom&nbsp;Cruise',&nbsp;'1962-07-03',&nbsp;1.7),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">140</td><td class="added">('&#1054;&#1083;&#1100;&#1075;&#1072;&nbsp;&#1050;&#1091;&#1088;&#1080;&#1083;&#1077;&#1085;&#1082;&#1086;',&nbsp;NULL,&nbsp;'1979-11-14',&nbsp;1.75),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">141</td><td class="added">('&#1040;&#1085;&#1076;&#1088;&#1077;&#1072;&nbsp;&#1056;&#1072;&#1081;&#1079;&#1073;&#1086;&#1088;&#1086;',&nbsp;'Andrea&nbsp;Riseborough',&nbsp;'1981-11-20',&nbsp;1.66),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">142</td><td class="added">('&#1052;&#1086;&#1088;&#1075;&#1072;&#1085;&nbsp;&#1060;&#1088;&#1080;&#1084;&#1072;&#1085;',&nbsp;'Morgan&nbsp;Freeman',&nbsp;'1937-06-01',&nbsp;1.88),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">143</td><td class="added">('&#1044;&#1078;&#1086;&#1079;&#1077;&#1092;&nbsp;&#1050;&#1086;&#1089;&#1080;&#1085;&#1089;&#1082;&#1080;',&nbsp;'Joseph&nbsp;Kosinski',&nbsp;'1974-05-03',&nbsp;1.93),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">144</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">145</td><td class="added">('&#1052;&#1072;&#1081;&#1083;&#1079;&nbsp;&#1058;&#1077;&#1083;&#1083;&#1077;&#1088;',&nbsp;'Miles&nbsp;Teller',&nbsp;'1987-02-20',&nbsp;1.85),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">146</td><td class="added">('&#1044;&#1078;&#1077;&#1085;&#1085;&#1080;&#1092;&#1077;&#1088;&nbsp;&#1050;&#1086;&#1085;&#1085;&#1077;&#1083;&#1083;&#1080;',&nbsp;'Jennifer&nbsp;Connelly',&nbsp;'1970-12-12',&nbsp;1.69),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">147</td><td class="added">('&#1044;&#1078;&#1086;&#1085;&nbsp;&#1061;&#1101;&#1084;&#1084;',&nbsp;'Jon&nbsp;Hamm',&nbsp;'1971-03-10',&nbsp;1.86),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">148</td><td class="added">('&#1053;&#1080;&#1082;&#1086;&#1083;&#1072;&#1089;&nbsp;&#1042;&#1080;&#1085;&#1076;&#1080;&#1085;&#1075;&nbsp;&#1056;&#1077;&#1092;&#1085;',&nbsp;'Nicolas&nbsp;Winding&nbsp;Refn',&nbsp;'1970-09-29',&nbsp;1.89);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">149</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">150</td><td class="added">INSERT&nbsp;INTO&nbsp;persons(name,&nbsp;original_name)&nbsp;VALUES</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">151</td><td class="added">('&#1040;&#1085;&#1078;&#1077;&#1083;&#1072;&nbsp;&#1041;&#1091;&#1085;&#1076;&#1072;&#1083;&#1086;&#1074;&#1080;&#1095;',&nbsp;'Angela&nbsp;Bundalovic'),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">152</td><td class="added">('&#1040;&#1085;&#1076;&#1088;&#1077;&#1072;&#1089;&nbsp;&#1051;&#1102;&#1082;&#1082;&#1077;&nbsp;&#1049;&#1086;&#1088;&#1075;&#1077;&#1085;&#1089;&#1077;&#1085;',&nbsp;'Andreas&nbsp;Lykke&nbsp;J&#248;rgensen'),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">153</td><td class="added">('&#1051;&#1080;&nbsp;&#1048;&nbsp;&#1063;&#1078;&#1072;&#1085;',&nbsp;'Li&nbsp;Ii&nbsp;Zhang'),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">154</td><td class="added">('Jason&nbsp;Hendil-Forssell',&nbsp;NULL);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">155</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">156</td><td class="added">--&nbsp;&#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1103;&nbsp;&#1086;&nbsp;&#1092;&#1080;&#1083;&#1100;&#1084;&#1072;&#1093;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">157</td><td class="added">INSERT&nbsp;INTO&nbsp;films(title,&nbsp;original_title,&nbsp;short_description,&nbsp;description,&nbsp;release_date,&nbsp;rating,&nbsp;rating_count,&nbsp;is_4k,&nbsp;dura<br>tion,&nbsp;country_id,&nbsp;age_rating_id,&nbsp;channel_id)&nbsp;VALUES</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">158</td><td class="added">('&#1042;&#1099;&#1089;&#1090;&#1088;&#1077;&#1083;&nbsp;&#1074;&nbsp;&#1087;&#1091;&#1089;&#1090;&#1086;&#1090;&#1091;',&nbsp;'Shot&nbsp;Caller',&nbsp;'&#1059;&#1075;&#1086;&#1076;&#1080;&#1074;&#1096;&#1077;&#1084;&#1091;&nbsp;&#1074;&nbsp;&#1090;&#1102;&#1088;&#1100;&#1084;&#1091;&nbsp;&#1073;&#1088;&#1086;&#1082;&#1077;&#1088;&#1091;&nbsp;&#1087;&#1088;&#1080;&#1093;&#1086;&#1076;&#1080;&#1090;&#1089;&#1103;&nbsp;&#1078;&#1080;&#1090;&#1100;&nbsp;&#1087;&#1086;&nbsp;&#1085;&#1086;&#1074;&#1099;&#1084;&nbsp;&#1087;&#1088;&#1072;&#1074;&#1080;&#1083;&#1072;&#1084;.&nbsp;&#1057;&#1080;&#1083;&#1100;&#1085;&#1072;&#1103;&nbsp;&#1076;&#1088;&#1072;&#1084;&#1072;&nbsp;&#1089;&nbsp;&#1053;&#1080;&#1082;<br>&#1086;&#1083;&#1072;&#1077;&#1084;&nbsp;&#1050;&#1086;&#1089;&#1090;&#1077;&#1088;&#1086;&#1084;-&#1042;&#1072;&#1083;&#1100;&#1076;&#1072;&#1091;',</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">159</td><td class="added">'&#1056;&#1086;&#1082;&#1086;&#1074;&#1072;&#1103;&nbsp;&#1089;&#1083;&#1091;&#1095;&#1072;&#1081;&#1085;&#1086;&#1089;&#1090;&#1100;,&nbsp;&#1089;&#1084;&#1077;&#1088;&#1090;&#1077;&#1083;&#1100;&#1085;&#1072;&#1103;&nbsp;&#1090;&#1088;&#1072;&#1075;&#1077;&#1076;&#1080;&#1103;,&nbsp;&#1080;&nbsp;&#1074;&#1089;&#1103;&nbsp;&#1077;&#1075;&#1086;&nbsp;&#1078;&#1080;&#1079;&#1085;&#1100;&nbsp;&#1083;&#1077;&#1090;&#1080;&#1090;&nbsp;&#1087;&#1086;&#1076;&nbsp;&#1086;&#1090;&#1082;&#1086;&#1089;&#8230;&nbsp;&#1054;&#1082;&#1072;&#1079;&#1072;&#1074;&#1096;&#1080;&#1089;&#1100;&nbsp;&#1079;&#1072;&nbsp;&#1088;&#1077;&#1096;&#1077;&#1090;&#1082;&#1086;&#1081;,&nbsp;&#1086;&#1085;&nbsp;&#1076;&#1086;&#1083;&#1078;&#1077;&#1085;&nbsp;&#1085;&#1072;&#1091;&#1095;&#1080;&#1090;&#1100;&#1089;&#1103;<br>&nbsp;&#1078;&#1080;&#1090;&#1100;&nbsp;&#1087;&#1086;&nbsp;&#1085;&#1086;&#1074;&#1099;&#1084;&nbsp;&#1079;&#1072;&#1082;&#1086;&#1085;&#1072;&#1084;.&nbsp;&#1058;&#1099;&nbsp;&#1076;&#1086;&#1083;&#1078;&#1077;&#1085;&nbsp;&#1089;&#1090;&#1072;&#1090;&#1100;&nbsp;&#1073;&#1086;&#1088;&#1094;&#1086;&#1084;,&nbsp;&#1072;&#1074;&#1090;&#1086;&#1088;&#1080;&#1090;&#1077;&#1090;&#1086;&#1084;&nbsp;&#1080;&#1083;&#1080;&nbsp;&#1086;&#1082;&#1072;&#1078;&#1077;&#1096;&#1100;&#1089;&#1103;&nbsp;&#1078;&#1077;&#1088;&#1090;&#1074;&#1086;&#1081;.&nbsp;&#1050;&#1072;&#1082;&#1091;&#1102;&nbsp;&#1094;&#1077;&#1085;&#1091;&nbsp;&#1087;&#1088;&#1080;&#1076;&#1077;&#1090;&#1089;&#1103;&nbsp;&#1079;&#1072;&#1087;&#1083;&#1072;&#1090;&#1080;&#1090;&#1100;,&nbsp;&#1095;&#1090;&#1086;&#1073;&#1099;&nbsp;<br>&#1074;&#1099;&#1078;&#1080;&#1090;&#1100;&nbsp;&#1074;&nbsp;&#1101;&#1090;&#1086;&#1084;&nbsp;&#1072;&#1076;&#1091;,&nbsp;&#1080;&#1079;&nbsp;&#1082;&#1086;&#1090;&#1086;&#1088;&#1086;&#1075;&#1086;&nbsp;&#1085;&#1077;&#1090;&nbsp;&#1076;&#1086;&#1088;&#1086;&#1075;&#1080;&nbsp;&#1085;&#1072;&#1079;&#1072;&#1076;?',</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">160</td><td class="added">'2017-06-17',&nbsp;7.5,&nbsp;212925,&nbsp;TRUE,&nbsp;120,&nbsp;1,&nbsp;4,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">161</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">162</td><td class="added">('&#1054;&#1073;&#1083;&#1080;&#1074;&#1080;&#1086;&#1085;',&nbsp;'Oblivion',&nbsp;'&#1044;&#1074;&#1086;&#1077;&nbsp;&#1085;&#1077;&#1089;&#1091;&#1090;&nbsp;&#1074;&#1072;&#1093;&#1090;&#1091;&nbsp;&#1085;&#1072;&nbsp;&#1086;&#1087;&#1091;&#1089;&#1090;&#1086;&#1096;&#1077;&#1085;&#1085;&#1086;&#1081;&nbsp;&#1047;&#1077;&#1084;&#1083;&#1077;&nbsp;&#1087;&#1086;&#1089;&#1083;&#1077;&nbsp;&#1074;&#1086;&#1081;&#1085;&#1099;&nbsp;&#1089;&nbsp;&#1080;&#1085;&#1086;&#1087;&#1083;&#1072;&#1085;&#1077;&#1090;&#1103;&#1085;&#1072;&#1084;&#1080;.&nbsp;&#1058;&#1086;&#1084;&nbsp;&#1050;&#1088;&#1091;&#1079;&nbsp;&#1074;&nbsp;&#1092;&#1072;&#1085;&#1090;&#1072;&#1089;&#1090;&#1080;&#1082;&#1077;&nbsp;&#1086;&#1073;&nbsp;<br>&#1091;&#1087;&#1088;&#1103;&#1084;&#1086;&#1081;&nbsp;&#1087;&#1072;&#1084;&#1103;&#1090;&#1080;',</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">163</td><td class="added">'&#1047;&#1077;&#1084;&#1083;&#1103;,&nbsp;&#1087;&#1077;&#1088;&#1077;&#1078;&#1080;&#1074;&#1096;&#1072;&#1103;&nbsp;&#1074;&#1086;&#1081;&#1085;&#1091;&nbsp;&#1089;&nbsp;&#1080;&#1085;&#1086;&#1087;&#1083;&#1072;&#1085;&#1077;&#1090;&#1085;&#1099;&#1084;&#1080;&nbsp;&#1079;&#1072;&#1093;&#1074;&#1072;&#1090;&#1095;&#1080;&#1082;&#1072;&#1084;&#1080;,&nbsp;&#1086;&#1087;&#1091;&#1089;&#1090;&#1077;&#1083;&#1072;;&nbsp;&#1086;&#1089;&#1090;&#1072;&#1090;&#1082;&#1080;&nbsp;&#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1095;&#1077;&#1089;&#1090;&#1074;&#1072;&nbsp;&#1075;&#1086;&#1090;&#1086;&#1074;&#1103;&#1090;&#1089;&#1103;&nbsp;&#1087;&#1086;&#1082;&#1080;&#1085;&#1091;&#1090;&#1100;&nbsp;&#1085;&#1077;&#1087;&#1088;&#1080;&#1075;&#1086;&#1076;&#1085;&#1091;&#1102;&nbsp;&#1076;&#1083;&#1103;<br>&nbsp;&#1078;&#1080;&#1079;&#1085;&#1080;&nbsp;&#1087;&#1083;&#1072;&#1085;&#1077;&#1090;&#1091;.&nbsp;&#1043;&#1083;&#1072;&#1074;&#1085;&#1099;&#1081;&nbsp;&#1075;&#1077;&#1088;&#1086;&#1081;&nbsp;&#8212;&nbsp;&#1090;&#1077;&#1093;&#1085;&#1080;&#1082;&nbsp;&#1087;&#1086;&nbsp;&#1086;&#1073;&#1089;&#1083;&#1091;&#1078;&#1080;&#1074;&#1072;&#1085;&#1080;&#1102;&nbsp;&#1076;&#1088;&#1086;&#1085;&#1086;&#1074;&nbsp;&#8212;&nbsp;&#1085;&#1072;&#1093;&#1086;&#1076;&#1080;&#1090;&nbsp;&#1088;&#1072;&#1079;&#1073;&#1080;&#1074;&#1096;&#1080;&#1081;&#1089;&#1103;&nbsp;&#1082;&#1086;&#1088;&#1072;&#1073;&#1083;&#1100;&nbsp;NASA,&nbsp;&#1082;&#1086;&#1084;&#1072;&#1085;&#1076;&#1072;&nbsp;&#1082;&#1086;&#1090;&#1086;&#1088;&#1086;&#1075;&#1086;&nbsp;&#1087;&#1086;&#1075;&#1080;&#1073;<br>&#1072;&#1077;&#1090;&nbsp;&#1091;&nbsp;&#1085;&#1077;&#1075;&#1086;&nbsp;&#1085;&#1072;&nbsp;&#1075;&#1083;&#1072;&#1079;&#1072;&#1093;.&nbsp;&#1045;&#1084;&#1091;&nbsp;&#1091;&#1076;&#1072;&#1105;&#1090;&#1089;&#1103;&nbsp;&#1089;&#1087;&#1072;&#1089;&#1090;&#1080;&nbsp;&#1083;&#1080;&#1096;&#1100;&nbsp;&#1086;&#1076;&#1085;&#1091;&nbsp;&#1078;&#1077;&#1085;&#1097;&#1080;&#1085;&#1091;&nbsp;&#8212;&nbsp;&#1080;&nbsp;&#1074;&#1089;&#1082;&#1086;&#1088;&#1077;&nbsp;&#1086;&#1085;&nbsp;&#1087;&#1086;&#1085;&#1080;&#1084;&#1072;&#1077;&#1090;,&nbsp;&#1095;&#1090;&#1086;&nbsp;&#1101;&#1090;&#1086;&nbsp;&#1087;&#1077;&#1088;&#1077;&#1074;&#1077;&#1088;&#1085;&#1105;&#1090;&nbsp;&#1077;&#1075;&#1086;&nbsp;&#1078;&#1080;&#1079;&#1085;&#1100;.',</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">164</td><td class="added">'2013-03-26',&nbsp;7.2,&nbsp;367069,&nbsp;TRUE,&nbsp;125,&nbsp;1,&nbsp;3,&nbsp;2),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">165</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">166</td><td class="added">('&#1058;&#1086;&#1087;&nbsp;&#1043;&#1072;&#1085;:&nbsp;&#1052;&#1101;&#1074;&#1077;&#1088;&#1080;&#1082;',&nbsp;'Top&nbsp;Gun:&nbsp;Maverick',&nbsp;'&#1040;&#1084;&#1077;&#1088;&#1080;&#1082;&#1072;&#1085;&#1089;&#1082;&#1080;&#1081;&nbsp;&#1073;&#1086;&#1077;&#1074;&#1080;&#1082;&nbsp;&#1044;&#1078;&#1086;&#1079;&#1077;&#1092;&#1072;&nbsp;&#1050;&#1086;&#1089;&#1080;&#1085;&#1089;&#1082;&#1080;&nbsp;&#1089;&nbsp;&#1058;&#1086;&#1084;&#1086;&#1084;&nbsp;&#1050;&#1088;&#1091;&#1079;&#1086;&#1084;&nbsp;&#1074;&nbsp;&#1075;&#1083;&#1072;&#1074;&#1085;&#1086;&#1081;&nbsp;&#1088;&#1086;&#1083;&#1080;,&nbsp;&#1103;&#1074;&#1083;&#1103;&#1102;&#1097;&#1080;&#1081;&#1089;<br>&#1103;&nbsp;&#1087;&#1088;&#1086;&#1076;&#1086;&#1083;&#1078;&#1077;&#1085;&#1080;&#1077;&#1084;&nbsp;&#1092;&#1080;&#1083;&#1100;&#1084;&#1072;&nbsp;1986&nbsp;&#1075;&#1086;&#1076;&#1072;&nbsp;&#171;&#1051;&#1091;&#1095;&#1096;&#1080;&#1081;&nbsp;&#1089;&#1090;&#1088;&#1077;&#1083;&#1086;&#1082;&#187;',</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">167</td><td class="added">'&#1055;&#1080;&#1090;&nbsp;&#1052;&#1080;&#1090;&#1095;&#1077;&#1083;&#1083;&nbsp;&#1087;&#1086;&nbsp;&#1087;&#1088;&#1086;&#1079;&#1074;&#1080;&#1097;&#1091;&nbsp;&#1052;&#1101;&#1074;&#1077;&#1088;&#1080;&#1082;&nbsp;&#1073;&#1086;&#1083;&#1077;&#1077;&nbsp;30&nbsp;&#1083;&#1077;&#1090;&nbsp;&#1086;&#1089;&#1090;&#1072;&#1077;&#1090;&#1089;&#1103;&nbsp;&#1086;&#1076;&#1085;&#1080;&#1084;&nbsp;&#1080;&#1079;&nbsp;&#1083;&#1091;&#1095;&#1096;&#1080;&#1093;&nbsp;&#1087;&#1080;&#1083;&#1086;&#1090;&#1086;&#1074;&nbsp;&#1042;&#1052;&#1060;:&nbsp;&#1073;&#1077;&#1089;&#1089;&#1090;&#1088;&#1072;&#1096;&#1085;&#1099;&#1081;&nbsp;&#1083;&#1077;&#1090;&#1095;&#1080;&#1082;-&#1080;&#1089;&#1087;&#1099;&#1090;&#1072;&#1090;&#1077;&#1083;&#1100;,&nbsp;&#1086;&#1085;&nbsp;&#1088;&#1072;<br>&#1089;&#1096;&#1080;&#1088;&#1103;&#1077;&#1090;&nbsp;&#1075;&#1088;&#1072;&#1085;&#1080;&#1094;&#1099;&nbsp;&#1074;&#1086;&#1079;&#1084;&#1086;&#1078;&#1085;&#1086;&#1075;&#1086;&nbsp;&#1080;&nbsp;&#1089;&#1090;&#1072;&#1088;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&nbsp;&#1080;&#1079;&#1073;&#1077;&#1075;&#1072;&#1077;&#1090;&nbsp;&#1087;&#1086;&#1074;&#1099;&#1096;&#1077;&#1085;&#1080;&#1103;&nbsp;&#1074;&nbsp;&#1079;&#1074;&#1072;&#1085;&#1080;&#1080;,&nbsp;&#1082;&#1086;&#1090;&#1086;&#1088;&#1086;&#1077;&nbsp;&#1079;&#1072;&#1089;&#1090;&#1072;&#1074;&#1080;&#1083;&#1086;&nbsp;&#1073;&#1099;&nbsp;&#1077;&#1075;&#1086;&nbsp;&#1087;&#1088;&#1080;&#1079;&#1077;&#1084;&#1083;&#1080;&#1090;&#1100;&#1089;&#1103;&nbsp;&#1085;&#1072;&#1074;&#1089;&#1077;&#1075;&#1076;&#1072;.&nbsp;&#1055;&#1088;<br>&#1080;&#1089;&#1090;&#1091;&#1087;&#1080;&#1074;&nbsp;&#1082;&nbsp;&#1087;&#1086;&#1076;&#1075;&#1086;&#1090;&#1086;&#1074;&#1082;&#1077;&nbsp;&#1086;&#1090;&#1088;&#1103;&#1076;&#1072;&nbsp;&#1074;&#1099;&#1087;&#1091;&#1089;&#1082;&#1085;&#1080;&#1082;&#1086;&#1074;&nbsp;&#171;&#1058;&#1086;&#1087;&nbsp;&#1043;&#1072;&#1085;&#187;&nbsp;&#1076;&#1083;&#1103;&nbsp;&#1089;&#1087;&#1077;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1086;&#1081;&nbsp;&#1084;&#1080;&#1089;&#1089;&#1080;&#1080;,&nbsp;&#1052;&#1101;&#1074;&#1077;&#1088;&#1080;&#1082;&nbsp;&#1074;&#1089;&#1090;&#1088;&#1077;&#1095;&#1072;&#1077;&#1090;&nbsp;&#1083;&#1077;&#1081;&#1090;&#1077;&#1085;&#1072;&#1085;&#1090;&#1072;&nbsp;&#1041;&#1088;&#1101;&#1076;&#1083;&#1080;&nbsp;&#1041;&#1088;&#1101;&#1076;&#1096;&#1086;&#1091;&nbsp;&#8212;&nbsp;<br>&#1089;&#1099;&#1085;&#1072;&nbsp;&#1089;&#1074;&#1086;&#1077;&#1075;&#1086;&nbsp;&#1087;&#1086;&#1082;&#1086;&#1081;&#1085;&#1086;&#1075;&#1086;&nbsp;&#1076;&#1088;&#1091;&#1075;&#1072;,&nbsp;&#1083;&#1077;&#1081;&#1090;&#1077;&#1085;&#1072;&#1085;&#1090;&#1072;&nbsp;&#1053;&#1080;&#1082;&#1072;&nbsp;&#1041;&#1088;&#1101;&#1076;&#1096;&#1086;&#1091;.',</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">168</td><td class="added">'2022-05-18',&nbsp;7.8,&nbsp;80800,&nbsp;TRUE,&nbsp;130,&nbsp;1,&nbsp;3,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">169</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">170</td><td class="added">('&#1050;&#1086;&#1074;&#1073;&#1086;&#1081;&nbsp;&#1080;&#1079;&nbsp;&#1050;&#1086;&#1087;&#1077;&#1085;&#1075;&#1072;&#1075;&#1077;&#1085;&#1072;',&nbsp;'Copenhagen&nbsp;Cowboy',&nbsp;'&#1057;&#1077;&#1088;&#1080;&#1072;&#1083;&nbsp;&#1076;&#1072;&#1090;&#1089;&#1082;&#1086;&#1075;&#1086;&nbsp;&#1088;&#1077;&#1078;&#1080;&#1089;&#1089;&#1105;&#1088;&#1072;&nbsp;&#1053;&#1080;&#1082;&#1086;&#1083;&#1072;&#1089;&#1072;&nbsp;&#1042;&#1080;&#1085;&#1076;&#1080;&#1085;&#1075;&#1072;&nbsp;&#1056;&#1077;&#1092;&#1085;&#1072;,&nbsp;&#1087;&#1088;&#1077;&#1084;&#1100;&#1077;&#1088;&#1072;&nbsp;&#1082;&#1086;&#1090;&#1086;&#1088;&#1086;&#1075;&#1086;&nbsp;&#1089;&#1086;&#1089;<br>&#1090;&#1086;&#1103;&#1083;&#1072;&#1089;&#1100;&nbsp;&#1074;&nbsp;&#1089;&#1077;&#1085;&#1090;&#1103;&#1073;&#1088;&#1077;&nbsp;2022&nbsp;&#1075;&#1086;&#1076;&#1072;&nbsp;&#1085;&#1072;&nbsp;79-&#1084;&nbsp;&#1042;&#1077;&#1085;&#1077;&#1094;&#1080;&#1072;&#1085;&#1089;&#1082;&#1086;&#1084;&nbsp;&#1082;&#1080;&#1085;&#1086;&#1092;&#1077;&#1089;&#1090;&#1080;&#1074;&#1072;&#1083;&#1077;',</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">171</td><td class="added">'&#1047;&#1072;&#1075;&#1072;&#1076;&#1086;&#1095;&#1085;&#1072;&#1103;&nbsp;&#1076;&#1077;&#1074;&#1091;&#1096;&#1082;&#1072;&nbsp;&#1052;&#1080;&#1091;&nbsp;&#1084;&#1085;&#1086;&#1075;&#1086;&nbsp;&#1083;&#1077;&#1090;&nbsp;&#1087;&#1088;&#1086;&#1074;&#1077;&#1083;&#1072;&nbsp;&#1074;&nbsp;&#1085;&#1077;&#1074;&#1086;&#1083;&#1077;.&nbsp;&#1054;&#1085;&#1072;&nbsp;&#1093;&#1086;&#1095;&#1077;&#1090;&nbsp;&#1086;&#1090;&#1086;&#1084;&#1089;&#1090;&#1080;&#1090;&#1100;&nbsp;&#1089;&#1074;&#1086;&#1077;&#1084;&#1091;&nbsp;&#1079;&#1072;&#1082;&#1083;&#1103;&#1090;&#1086;&#1084;&#1091;&nbsp;&#1074;&#1088;&#1072;&#1075;&#1091;&nbsp;&#1080;&nbsp;&#1076;&#1083;&#1103;&nbsp;&#1101;&#1090;&#1086;&#1075;&#1086;&nbsp;&#1079;&#1085;&#1072;&#1082;&#1086;&#1084;&#1080;&#1090;&#1089;&#1103;&nbsp;&#1089;&nbsp;<br>&#1087;&#1088;&#1077;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;&#1084;&nbsp;&#1084;&#1080;&#1088;&#1086;&#1084;&nbsp;&#1050;&#1086;&#1087;&#1077;&#1085;&#1075;&#1072;&#1075;&#1077;&#1085;&#1072;.',</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">172</td><td class="added">'2022-09-09',&nbsp;7.8,&nbsp;80800,&nbsp;TRUE,&nbsp;360,&nbsp;2,&nbsp;4,&nbsp;1);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">173</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">174</td><td class="added">INSERT&nbsp;INTO&nbsp;film_genres(film_id,&nbsp;genre_id)&nbsp;VALUES</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">175</td><td class="added">(1,&nbsp;4),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">176</td><td class="added">(1,&nbsp;2),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">177</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">178</td><td class="added">(2,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">179</td><td class="added">(2,&nbsp;3),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">180</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">181</td><td class="added">(3,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">182</td><td class="added">(3,&nbsp;2),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">183</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">184</td><td class="added">(4,&nbsp;2),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">185</td><td class="added">(4,&nbsp;5);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">186</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">187</td><td class="added">INSERT&nbsp;INTO&nbsp;film_languages(film_id,&nbsp;language_id)&nbsp;VALUES</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">188</td><td class="added">(1,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">189</td><td class="added">(1,&nbsp;2),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">190</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">191</td><td class="added">(2,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">192</td><td class="added">(2,&nbsp;2),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">193</td><td class="added">(2,&nbsp;3),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">194</td><td class="added">(2,&nbsp;4),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">195</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">196</td><td class="added">(3,&nbsp;3),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">197</td><td class="added">(3,&nbsp;4),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">198</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">199</td><td class="added">(4,&nbsp;3),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">200</td><td class="added">(4,&nbsp;4);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">201</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">202</td><td class="added">INSERT&nbsp;INTO&nbsp;film_crew(film_id,&nbsp;person_id,&nbsp;post_id)&nbsp;VALUES</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">203</td><td class="added">(1,&nbsp;1,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">204</td><td class="added">(1,&nbsp;2,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">205</td><td class="added">(1,&nbsp;3,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">206</td><td class="added">(1,&nbsp;4,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">207</td><td class="added">(1,&nbsp;5,&nbsp;2),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">208</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">209</td><td class="added">(2,&nbsp;6,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">210</td><td class="added">(2,&nbsp;7,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">211</td><td class="added">(2,&nbsp;8,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">212</td><td class="added">(2,&nbsp;9,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">213</td><td class="added">(2,&nbsp;10,&nbsp;2),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">214</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">215</td><td class="added">(3,&nbsp;6,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">216</td><td class="added">(3,&nbsp;11,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">217</td><td class="added">(3,&nbsp;12,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">218</td><td class="added">(3,&nbsp;13,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">219</td><td class="added">(3,&nbsp;10,&nbsp;2),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">220</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">221</td><td class="added">(4,&nbsp;15,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">222</td><td class="added">(4,&nbsp;16,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">223</td><td class="added">(4,&nbsp;17,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">224</td><td class="added">(4,&nbsp;18,&nbsp;1),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">225</td><td class="added">(4,&nbsp;14,&nbsp;2);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">226</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">227</td><td class="added">--&nbsp;&#1086;&#1087;&#1080;&#1089;&#1072;&#1085;&#1080;&#1077;&nbsp;&#1089;&#1077;&#1088;&#1080;&#1081;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">228</td><td class="added">INSERT&nbsp;INTO&nbsp;episodes(film_id,&nbsp;season_number,&nbsp;episode_number,&nbsp;title,&nbsp;description,&nbsp;duration)&nbsp;VALUES</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">229</td><td class="added">(4,&nbsp;1,&nbsp;1,&nbsp;'&#1052;&#1080;&#1091;&nbsp;&#1058;&#1072;&#1080;&#1085;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1072;&#1103;',&nbsp;'&#1053;&#1072;&#1095;&#1072;&#1083;&#1086;',&nbsp;60),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">230</td><td class="added">(4,&nbsp;1,&nbsp;2,&nbsp;'&#1052;&#1077;&#1089;&#1090;&#1100;&nbsp;-&nbsp;&#1084;&#1086;&#1077;&nbsp;&#1080;&#1084;&#1103;',&nbsp;'&#1055;&#1088;&#1086;&#1076;&#1086;&#1083;&#1078;&#1077;&#1085;&#1080;&#1077;',&nbsp;60),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">231</td><td class="added">(4,&nbsp;1,&nbsp;3,&nbsp;'&#1044;&#1074;&#1086;&#1088;&#1077;&#1094;&nbsp;&#1044;&#1088;&#1072;&#1082;&#1086;&#1085;&#1072;',&nbsp;'&#1055;&#1088;&#1086;&#1076;&#1086;&#1083;&#1078;&#1077;&#1085;&#1080;&#1077;',&nbsp;60),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">232</td><td class="added">(4,&nbsp;1,&nbsp;4,&nbsp;'&#1054;&#1090;&nbsp;&#1084;&#1080;&#1089;&#1090;&#1077;&#1088;&#1072;&nbsp;&#1063;&#1072;&#1085;&#1075;&#1072;&nbsp;&#1089;&nbsp;&#1083;&#1102;&#1073;&#1086;&#1074;&#1100;&#1102;',&nbsp;'&#1055;&#1088;&#1086;&#1076;&#1086;&#1083;&#1078;&#1077;&#1085;&#1080;&#1077;',&nbsp;60),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">233</td><td class="added">(4,&nbsp;1,&nbsp;5,&nbsp;'&#1050;&#1086;&#1087;&#1077;&#1085;&#1075;&#1072;&#1075;&#1077;&#1085;',&nbsp;'&#1055;&#1088;&#1086;&#1076;&#1086;&#1083;&#1078;&#1077;&#1085;&#1080;&#1077;',&nbsp;60),</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">234</td><td class="added">(4,&nbsp;1,&nbsp;6,&nbsp;'&#1053;&#1077;&#1073;&#1077;&#1089;&#1072;&nbsp;&#1091;&#1087;&#1072;&#1076;&#1091;&#1090;',&nbsp;'&#1050;&#1086;&#1085;&#1077;&#1094;',&nbsp;60);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">235</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">236</td><td class="added">--&nbsp;&#1079;&#1072;&#1087;&#1088;&#1086;&#1089;&nbsp;&#1092;&#1080;&#1083;&#1100;&#1084;&#1086;&#1074;&nbsp;&#1089;&nbsp;&#1088;&#1077;&#1078;&#1080;&#1089;&#1089;&#1105;&#1088;&#1072;&#1084;&#1080;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">237</td><td class="added">SELECT</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">238</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;film_crew.film_id,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">239</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.title,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">240</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.release_date,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">241</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.rating,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">242</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;persons.*</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">243</td><td class="added">FROM</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">244</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films&nbsp;LEFT&nbsp;JOIN&nbsp;film_crew</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">245</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON&nbsp;film_crew.film_id&nbsp;=&nbsp;films.id</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">246</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;INNER&nbsp;JOIN&nbsp;persons</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">247</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON&nbsp;film_crew.person_id&nbsp;=&nbsp;persons.id</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">248</td><td class="added">WHERE</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">249</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;film_crew.post_id&nbsp;=&nbsp;2</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">250</td><td class="added">ORDER&nbsp;BY</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">251</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;persons.name;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">252</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">253</td><td class="added">--&nbsp;&#1074;&#1099;&#1073;&#1088;&#1072;&#1090;&#1100;&nbsp;&#1090;&#1086;&#1083;&#1100;&#1082;&#1086;&nbsp;&#1089;&#1077;&#1088;&#1080;&#1072;&#1083;&#1099;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">254</td><td class="added">SELECT</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">255</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.id,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">256</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.title,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">257</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.short_description,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">258</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.release_date,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">259</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.rating,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">260</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.rating_count,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">261</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.is_4k,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">262</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;countries.name,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">263</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;age_ratings.title&nbsp;age_rating,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">264</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;channels.title&nbsp;channel,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">265</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;counts.episode_count</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">266</td><td class="added">FROM</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">267</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">268</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;countries,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">269</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;age_ratings,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">270</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;channels,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">271</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;(SELECT&nbsp;film_id,&nbsp;COUNT(*)&nbsp;episode_count&nbsp;FROM&nbsp;episodes&nbsp;GROUP&nbsp;BY&nbsp;film_id)&nbsp;counts</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">272</td><td class="added">WHERE</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">273</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.country_id&nbsp;=&nbsp;countries.id</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">274</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;AND&nbsp;films.age_rating_id&nbsp;=&nbsp;age_ratings.id</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">275</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;AND&nbsp;films.channel_id&nbsp;=&nbsp;channels.id</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">276</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;AND&nbsp;films.id&nbsp;=&nbsp;counts.film_id</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">277</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;AND&nbsp;counts.episode_count&nbsp;&gt;&nbsp;1</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">278</td><td class="added">ORDER&nbsp;BY</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">279</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.title;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">280</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">281</td><td class="added">--&nbsp;&#1087;&#1088;&#1077;&#1076;&#1089;&#1090;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1103;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">282</td><td class="added">CREATE&nbsp;VIEW&nbsp;film_directors&nbsp;AS</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">283</td><td class="added">SELECT</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">284</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;film_crew.film_id,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">285</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.title,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">286</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.release_date,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">287</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.rating,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">288</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;persons.*</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">289</td><td class="added">FROM</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">290</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films&nbsp;LEFT&nbsp;JOIN&nbsp;film_crew</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">291</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON&nbsp;film_crew.film_id&nbsp;=&nbsp;films.id</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">292</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;INNER&nbsp;JOIN&nbsp;persons</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">293</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON&nbsp;film_crew.person_id&nbsp;=&nbsp;persons.id</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">294</td><td class="added">WHERE</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">295</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;film_crew.post_id&nbsp;=&nbsp;2</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">296</td><td class="added">ORDER&nbsp;BY</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">297</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;persons.name;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">298</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">299</td><td class="added">CREATE&nbsp;VIEW&nbsp;series&nbsp;AS</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">300</td><td class="added">SELECT</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">301</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.id,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">302</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.title,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">303</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.short_description,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">304</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.release_date,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">305</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.rating,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">306</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.rating_count,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">307</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.is_4k,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">308</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;countries.name,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">309</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;age_ratings.title&nbsp;age_rating,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">310</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;channels.title&nbsp;channel,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">311</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;counts.episode_count</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">312</td><td class="added">FROM</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">313</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">314</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;countries,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">315</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;age_ratings,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">316</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;channels,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">317</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;(SELECT&nbsp;film_id,&nbsp;COUNT(*)&nbsp;episode_count&nbsp;FROM&nbsp;episodes&nbsp;GROUP&nbsp;BY&nbsp;film_id)&nbsp;counts</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">318</td><td class="added">WHERE</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">319</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.country_id&nbsp;=&nbsp;countries.id</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">320</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;AND&nbsp;films.age_rating_id&nbsp;=&nbsp;age_ratings.id</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">321</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;AND&nbsp;films.channel_id&nbsp;=&nbsp;channels.id</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">322</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;AND&nbsp;films.id&nbsp;=&nbsp;counts.film_id</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">323</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;AND&nbsp;counts.episode_count&nbsp;&gt;&nbsp;1</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">324</td><td class="added">ORDER&nbsp;BY</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">325</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;films.title;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">326</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">327</td><td class="added">--&nbsp;&#1076;&#1086;&#1073;&#1072;&#1074;&#1080;&#1090;&#1100;&nbsp;&#1074;&nbsp;&#1041;&#1044;&nbsp;&#1085;&#1086;&#1074;&#1099;&#1081;&nbsp;&#1103;&#1079;&#1099;&#1082;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">328</td><td class="added">delimiter&nbsp;//</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">329</td><td class="added">CREATE&nbsp;PROCEDURE&nbsp;add_new_language(IN&nbsp;language&nbsp;VARCHAR(250),&nbsp;IN&nbsp;film_id&nbsp;INT)</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">330</td><td class="added">BEGIN</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">331</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;DECLARE&nbsp;lang_id&nbsp;INT;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">332</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">333</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;INSERT&nbsp;INTO&nbsp;languages(title)&nbsp;VALUES&nbsp;(language);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">334</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;SET&nbsp;lang_id&nbsp;=&nbsp;LAST_INSERT_ID();</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">335</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;INSERT&nbsp;INTO&nbsp;film_languages(film_id,&nbsp;language_id)&nbsp;VALUES&nbsp;(film_id,&nbsp;lang_id);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">336</td><td class="added">END//</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">337</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">338</td><td class="added">--&nbsp;&#1086;&#1073;&#1085;&#1086;&#1074;&#1080;&#1090;&#1100;&nbsp;&#1087;&#1088;&#1086;&#1076;&#1086;&#1083;&#1078;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1100;&nbsp;&#1089;&#1077;&#1088;&#1080;&#1072;&#1083;&#1072;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">339</td><td class="added">delimiter&nbsp;//</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">340</td><td class="added">CREATE&nbsp;PROCEDURE&nbsp;update_duration(IN&nbsp;series_id&nbsp;INT)</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">341</td><td class="added">BEGIN</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">342</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;DECLARE&nbsp;duration_sum&nbsp;INT;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">343</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">344</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;SELECT&nbsp;SUM(duration)&nbsp;INTO&nbsp;duration_sum&nbsp;FROM&nbsp;episodes&nbsp;WHERE&nbsp;film_id&nbsp;=&nbsp;series_id;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">345</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;UPDATE&nbsp;films&nbsp;SET&nbsp;duration&nbsp;=&nbsp;duration_sum&nbsp;WHERE&nbsp;id&nbsp;=&nbsp;series_id;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">346</td><td class="added">END//</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">347</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">348</td><td class="added">--&nbsp;&#1079;&#1072;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1077;&nbsp;&#1080;&#1089;&#1090;&#1086;&#1088;&#1080;&#1080;&nbsp;&#1091;&#1076;&#1072;&#1083;&#1103;&#1077;&#1084;&#1099;&#1093;&nbsp;&#1092;&#1080;&#1083;&#1100;&#1084;&#1086;&#1074;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">349</td><td class="added">delimiter&nbsp;//</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">350</td><td class="added">CREATE&nbsp;TRIGGER&nbsp;deleted_films_trigger&nbsp;BEFORE&nbsp;DELETE&nbsp;ON&nbsp;films</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">351</td><td class="added">FOR&nbsp;EACH&nbsp;ROW</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">352</td><td class="added">BEGIN</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">353</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;INSERT&nbsp;INTO&nbsp;deleted_films(film_id,&nbsp;title,&nbsp;delete_date)&nbsp;VALUES(OLD.id,&nbsp;OLD.title,&nbsp;NOW());</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">354</td><td class="added">END//</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">355</td><td class="added"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">356</td><td class="added">--&nbsp;&#1086;&#1073;&#1085;&#1086;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077;&nbsp;&#1087;&#1088;&#1086;&#1076;&#1086;&#1083;&#1078;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;&nbsp;&#1089;&#1077;&#1088;&#1080;&#1072;&#1083;&#1072;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">357</td><td class="added">delimiter&nbsp;//</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">358</td><td class="added">CREATE&nbsp;TRIGGER&nbsp;duration_trigger&nbsp;AFTER&nbsp;INSERT&nbsp;ON&nbsp;episodes</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">359</td><td class="added">FOR&nbsp;EACH&nbsp;ROW</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">360</td><td class="added">BEGIN</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">361</td><td class="added">&nbsp;&nbsp;&nbsp;&nbsp;CALL&nbsp;update_duration(NEW.film_id);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">362</td><td class="added">END//</td>
+      </tr>
+      <tr>
+<td class="lineNumber">1</td><td class="equal"></td><td class="lineNumber">363</td><td class="equal"></td>
+      </tr>
+  </table>
+</body>
